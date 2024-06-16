@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>时间</title>
+	</head>
+	<body>
+		<div id="clock"></div>
+		<script>
+			
+			function updateTime() {
+			  // 获取当前时间
+			  var currentTime = new Date();
+			
+			  // 获取小时、分钟和秒数
+			  var hours = currentTime.getHours();
+			  var minutes = currentTime.getMinutes();
+			  var seconds = currentTime.getSeconds();
+			
+			  // 在数字小于10时在前面添加0，保证两位数显示
+			  hours = (hours < 10 ? "0" : "") + hours;
+			  minutes = (minutes < 10 ? "0" : "") + minutes;
+			  seconds = (seconds < 10 ? "0" : "") + seconds;
+			
+			  // 将时间显示在页面上
+			  var displayTime = hours + ":" + minutes + ":" + seconds;
+			  document.getElementById("clock").innerHTML = displayTime;
+			}
+			
+			// 使用定时器每秒更新时间
+			setInterval(updateTime, 1000);
+
+
+		</script>
+		
+	</body>
+<html>
