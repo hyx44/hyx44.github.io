@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				display: flex;
+				justify-content: center; /* 水平居中 */ 
+			}
+			.beijing{
+				width: 1000px;  
+				height: 1000px;  
+				background-color: paleturquoise; /* 背景色，如果图片未加载时显示 */  
+				background-image: url('img/GG.jpg'); /* 替换为您的图片路径 */  
+				background-size: cover; /* 图片覆盖整个div */  
+				background-position: center; /* 图片居中显示 */  
+				text-align: center; /* 文本居中 */  
+				line-height: 1000px; /* 垂直居中，与div高度一致 */  
+				margin: 0 auto; /* 水平居中 */  
+			}
+			.beijing1{
+				width: 1000px;  
+				height: 1000px;  
+				background-color: paleturquoise; /* 背景色，如果图片未加载时显示 */  
+				background-image: url('img/grassland.png'); /* 替换为您的图片路径 */  
+				background-size: cover; /* 图片覆盖整个div */  
+				background-position: center; /* 图片居中显示 */  
+				text-align: center; /* 文本居中 */  
+				line-height: 1000px; /* 垂直居中，与div高度一致 */  
+				margin: 0 auto; /* 水平居中 */  
+			}
+			.beijing2{
+				width: 1000px;  
+				height: 1000px;  
+				background-color: paleturquoise; /* 背景色，如果图片未加载时显示 */  
+				background-image: url('img/GG.jpg'); /* 替换为您的图片路径 */  
+				background-size: cover; /* 图片覆盖整个div */  
+				background-position: center; /* 图片居中显示 */  
+				text-align: center; /* 文本居中 */  
+				line-height: 1000px; /* 垂直居中，与div高度一致 */  
+				margin: 0 auto; /* 水平居中 */  
+			
+			}
+			.container {  
+			    justify-content: space-between;  
+			    align-items: flex-start;  
+			    padding: 20px; 
+			}  
+			
+			.ad-popup {  
+			    position: absolute;  
+			    top: 10%;  
+			    width: 200px; /* 弹窗宽度 */   
+			
+			}  
+			
+			.ad-popup.left {  
+			    left: 20px;  
+			}  
+			  
+			.ad-popup.right {  
+			    right: 40px;  
+			}  
+			 
+			.ad-content {  
+			    position: relative;  
+			    height: 400px; /* 弹窗内容高度，可以根据需要调整 */  
+			    overflow: hidden;  
+			}    
+			.ad-content img {  
+			    width: 100%;  
+			    height: auto;  
+			    display: block;  
+			}  
+			 .ad-content1 img {
+			   width: 50%;
+			    height: auto;  /* 根据宽度自动调整高度，保持比例 */ 
+				 display: block; 
+			 } 
+			.close-btn {  
+			    position: absolute;  
+			    bottom: 10px; /* 将关闭按钮放在底部 */  
+			    right: 10px;  
+			    border: none;  
+			    background: none;  
+			    cursor: pointer; 
+				 display: flex;
+			}  
+			.close-btn2 {  
+			    position: absolute;  
+			    bottom: 10px; /* 将关闭按钮放在底部 */  
+			    left: 10px;  
+			    border: none;  
+			    background: none;  
+			    cursor: pointer; 
+				 display: flex;
+			}  
+			  .close-btn1 {
+			      position: absolute;  
+			      top: 0;
+			      left: 0;  
+			      border: none;  
+			      background: none;  
+			      cursor: pointer; 
+			  	 display: flex;
+			  }  
+			.close-btn img {  
+			    width: 40px; /* 关闭按钮图片大小 */  
+			    height: 15px;  
+			}
+			.close-btn2 img {  
+			    width: 40px; /* 关闭按钮图片大小 */  
+			    height: 15px;  
+			}
+			.close-btn1 img {  
+			    width: 30px; /* 关闭按钮图片大小 */  
+			    height: 10px; 
+			}
+			
+			 .popup {  
+			    position: fixed; 
+			     bottom: 0px;  
+			     left: 0px; /* 修改为左下角 */  
+			     border-radius: 10px;  
+			     display: none; /* 初始时隐藏弹窗 */  
+			/*     z-index: 999;  */
+			 } 
+		</style>
+		<script src="js/GuangGao.js" type="text/javascript"></script>
+	</head>
+	<body>
+			<div class="beijing"><p>第一个内容</p>
+			<div class="beijing1"><p>第二个内容</p>
+			<div class="beijing2"><p>第三个内容</p>
+			</div>
+			</div>
+			</div>
+    <div class="container">  
+        <!-- 左侧广告弹窗 -->  
+        <div class="ad-popup left">  
+            <div class="ad-content">  
+                <img src="img/ad1.jpg" alt="左侧广告">  
+            </div>  
+            <button class="close-btn">  
+                <img src="img/close.png" alt="关闭">  
+            </button>  
+        </div>  
+        <!-- 右侧广告弹窗 -->  
+        <div class="ad-popup right">  
+            <div class="ad-content">  
+                <img src="img/ad1.jpg" alt="右侧广告">  
+            </div>  
+            <button class="close-btn2">  
+                <img src="img/close.png" alt="关闭">  
+            </button>  
+			<!-- 左下角广告弹窗 -->
+			    <div class="popup" id="popup"> 
+				 <div class="ad-content1">
+			        <img src="img/ad2.jpg" alt="下侧广告"> 
+				</div>
+			        <button class="close-btn1" id="closeBtn"><img src="img/close.png" alt="关闭"> </button>  
+			    </div> 
+        </div>  
+        <div class="main-content">  
+            <!-- 这里是页面的主要内容 -->  
+        </div>  
+    </div> 
+	</body>
+</html>
